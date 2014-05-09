@@ -1,0 +1,16 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {ngerman}
+\beamer@sectionintoc {1}{Einleitung}{3}{0}{1}
+\beamer@sectionintoc {2}{Untersuchungsgebiete}{15}{0}{2}
+\beamer@subsectionintoc {2}{1}{Alle Stationen entlang des Salzgradienten}{15}{0}{2}
+\beamer@subsectionintoc {2}{2}{Hiddenseer Standorte}{16}{0}{2}
+\beamer@sectionintoc {3}{Methoden}{20}{0}{3}
+\beamer@subsectionintoc {3}{1}{Vegetation}{20}{0}{3}
+\beamer@subsectionintoc {3}{2}{Sediment}{25}{0}{3}
+\beamer@subsectionintoc {3}{3}{Statistik}{27}{0}{3}
+\beamer@sectionintoc {4}{Ergebnisse und Diskussion}{28}{0}{4}
+\beamer@subsectionintoc {4}{1}{Vegetation}{28}{0}{4}
+\beamer@subsectionintoc {4}{2}{Deckung und PVI}{37}{0}{4}
+\beamer@subsectionintoc {4}{3}{Sediment}{38}{0}{4}
+\beamer@subsectionintoc {4}{4}{Fazit}{40}{0}{4}
+\beamer@sectionintoc {5}{Quellen}{41}{0}{5}
