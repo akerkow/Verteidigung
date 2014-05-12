@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[xcolor=dvipsnames]{beamer} 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -11,6 +11,11 @@
 \setbeamercolor{frametitle}{fg=subsection in head/foot.bg}
 \setbeamercovered{transparent}
 \usepackage{epstopdf}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%Häkchen
+\newcommand{\xmark}{\ding{55}}%Kreuz
+\usepackage{amssymb}
+\usepackage{xcolor}
 
 %Die Maße einer Folie in der Beamer-Präsentation betragen 128x96mm%
 
@@ -57,21 +62,18 @@ Sedimentstruktur
 \begin{frame}
 \frametitle{Fragestellungen dieser Arbeit}
 \begin{enumerate}
+\item Ist in dichten Makrophytenbeständen das Sediment feiner als auf freien/ spärlich besiedelten Flächen?
 \pause
-\item Ist in dichten Makrophytenbeständen das Sediment feiner?
+\item Ist der organische Gehalt der Sedimente in den dichten Beständen höher?
 \pause
-\item Korreliert der Anteil der Pflanzen in der Wassersäule mit der mittleren Korngröße?
+\item Verändert sich die Vegetationsstruktur im Jahresverlauf?
 \pause
-\item Ist der organische Gehalt der Sedimente höher?
-\pause
-\item Verändern sich Artenzusammensetzung und Vegetationsstruktur im Jahresverlauf?
-\pause
-\item Verändert sich die mittlere Korngröße und der organische Gehalt der Sedimente im Jahresverlauf? 
+\item Verändert sich die mittlere Korngröße, der Feinpartikelanteil und der organische Gehalt der Sedimente im Jahresverlauf? 
 \end{enumerate}
 \end{frame}
 
 \section{Untersuchungsgebiete}
-%\subsection{Alle Stationen entlang des Salzgradienten}
+\subsection{Alle Stationen entlang des Salzgradienten}
 %\begin{frame}
 %\frametitle{Alle Stationen entlang des Salzgradienten}
 %\begin{figure}
@@ -93,16 +95,42 @@ Sedimentstruktur
 
 \begin{frame}
 \frametitle{Vitte}
+\begin{columns}
+\begin{column}{7.5cm}
 \begin{figure}
 \includegraphics[height=0.8\textheight]{images/Fotos/vitte.png}
 \end{figure}
+\end{column}
+\begin{column}{4cm}
+\begin{itemize}
+\item[\textcolor{green}{$\blacksquare$}] Flächen mit dichter Vegetation
+\item[$ \hookrightarrow $] 0,8m tief
+\item[]
+\item[\textcolor{blue}{$\blacksquare$}] Flächen mit spärlicher Vegetation 
+\item[$ \hookrightarrow $] 0,6m tief
+\end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
 \frametitle{Grieben}
+\begin{columns}
+\begin{column}{7.5cm}
 \begin{figure}
-\includegraphics[width=0.8\textwidth]{images/Fotos/griebenerbucht.png}
+\includegraphics[width=\textwidth]{images/Fotos/griebenerbucht.png}
 \end{figure}
+\end{column}
+\begin{column}{4cm}
+\begin{itemize}
+\item[\textcolor{green}{$\blacksquare$}] Flächen mit dichter Vegetation
+\item[$ \hookrightarrow $] 0,8-0,9m tief
+\item[]
+\item[\textcolor{blue}{$\blacksquare$}] Flächen mit spärlicher Vegetation 
+\item[$ \hookrightarrow $] 0,6-0,7m tief
+\end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
 
 \section{Methoden}
@@ -131,7 +159,7 @@ Sedimentstruktur
 \begin{column}{5.5cm}
 \begin{block}{Absolute Deckung}
 Deckungsgrade: 
-1\%; 1-4\%; 5\%; 10\%; 20\%; ... ; 100\% 
+1\%; 2\%; 5\%; 10\%; 20\%; 30\%; ... ; 100\% 
 \end{block}
 \begin{figure}
 \includegraphics[height=40mm]{images/plotpictures/V+M.png}
@@ -151,14 +179,8 @@ Höhenstufen:
 \end{frame}
 
 \begin{frame}
-\frametitle{PVI-Berechnung}
-\begin{block}{Traditionell:}
-\begin{equation*}
-\frac{\text{Mittlere Wuchshöhe} * \text{Deckung}}{\text{Wassertiefe}}
-\end{equation*}
-\end{block}
-\pause
-\begin{block}{Verändert:}
+\frametitle{Anteil der Pflanzen an der Wassersäule (PVI)}
+\begin{block}{Berechnung}
 \begin{align*}
  PVI &=\frac{\sum_{i=a}^n \frac{H_i * C_i}{100}}{\text{mittlere Wassertiefe}} & H_i &=\text{Länge einer jeden Höhenschicht}\\ 
  & & C_i &=\text{Deckung auf dieser Höhenschicht}\\
@@ -186,180 +208,116 @@ Höhenstufen:
 \end{column}
 \end{columns}
 \end{frame}
+
 \begin{frame}[t]
+\frametitle{Korngrößenanalyse}
 \begin{columns}[t]
 \begin{column}{6.4cm}
 \begin{figure}
-\includegraphics[height=25mm]{images/Fotos/spritze.jpg} {\small [1]}
+\includegraphics[width=0.8\textwidth]{images/Fotos/sediment.jpg} 
+
+{\small Foto: Jutta Meyer}
 \hspace*{-8mm}
 \end{figure}
-\begin{enumerate}
-\item[1] Prozentualer Wassergehalt und organischer Gehalt
-\end{enumerate}
 \end{column}
-\begin{column}{6.4cm}
-\begin{figure}
-\includegraphics[height=25mm]{images/Fotos/Siebe2.jpeg} {\small [2]}
-\hspace*{+8mm}
-\end{figure}
-\begin{enumerate}
-\item[2] Korngrößenfraktionen
+
+\begin{column}{4.4cm}
+{\large Korngrößenfraktionen:}
 \begin{itemize}
-\item 1000$ \mu$m 
-\item 500$ \mu$m 
-\item 250$ \mu$m 
-\item 125$\mu$m 
-\item 63$ \mu$m 
+\item[]
+\item[$\Phi = 0$]  sehr grober Sand
+\item[$\Phi = 1$]  grober Sand
+\item[$\Phi = 2$]  Mittelsand
+\item[$\Phi = 3$]  feiner Sand
+\item[$\Phi = 4$] sehr feiner Sand
+\item[$\Phi = 5$] Ton und Schluff (berechnet)
 \end{itemize}
-\item[3] Berechnung der $<63 \mu$m 
--Fraktion
-\end{enumerate}
+
 \end{column}
 \end{columns}
 \end{frame}
 
-\subsection{Statistik}
+%\subsection{Statistik}
 
-\begin{frame}[t]
-\frametitle{Statistische Auswertung}
-\begin{figure}
-\begin{flushleft}
-Häufigkeit (\%)
-\end{flushleft}
-\includegraphics[height=30mm]{images/Fotos/bsp_kornverteilung.png}
-\vspace*{-0.76cm}
-\end{figure}
-\begin{flushright}
-Korngrößenklasse ($ \Phi $)
-\end{flushright}
-\begin{itemize}
-\setlength{\itemindent}{+5.5cm} 
-\item[Unterschiede zwischen $ +M $ und $ -M $:] Mann-Whithney-Test
-\item[Unterschiede im Jahresverlauf:] Kruskal-Wallis-Test, 
-\item[] Dunn's-Test 
-\end{itemize}
-\end{frame}
+%\begin{frame}[t]
+%\frametitle{Statistische Auswertung}
+%\begin{figure}
+%\begin{flushleft}
+%Häufigkeit (\%)
+%\end{flushleft}
+%\includegraphics[height=30mm]{images/Fotos/bsp_kornverteilung.png}
+%\vspace*{-0.76cm}
+%\end{figure}
+%\begin{flushright}
+%Korngrößenklasse ($ \Phi $)
+%\end{flushright}
+%\begin{itemize}
+%\setlength{\itemindent}{+5.5cm} 
+%\item[Unterschiede zwischen $ +M $ und $ -M $:] Mann-Whithney-Test
+%\item[Unterschiede im Jahresverlauf:] Kruskal-Wallis-Test, 
+%\item[] Dunn's-Test 
+%\end{itemize}
+%\end{frame}
 
 
 \section{Ergebnisse und Diskussion}
-\subsection{Vegetation}
+\subsection{Vegetation: Vitte}
 
 \begin{frame}
-\frametitle{Grieben (+M)}
+\center
+\textcolor{Blue}{{\LARGE Vegetation: Vitte}}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bedeckung mit Makrophytobenthos}
+\begin{columns}
+\begin{column}{6cm}
+\begin{figure}
+\includegraphics[width=\textwidth]{images/total_cover/total_cover1.eps}
+\end{figure}
+\end{column}
+\begin{column}{6cm}
+\begin{overprint}
+\onslide<1>
+\begin{figure}
+\includegraphics[width=\textwidth]{images/plotpictures/V+M.png}
+\end{figure}
+
+\onslide<2>
+\begin{figure}
+\includegraphics[width=\textwidth]{images/Fotos/vvonoben.jpg}
+\end{figure}
+\end{overprint}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{PVI}
 \begin{columns}
 \begin{column}{7.0cm}
 \begin{figure}
-\includegraphics[height=0.5\textheight]{images/plotpictures/Bsp_G+M}
+\includegraphics[width=\textwidth]{images/pvi/boxplot_pvi1.eps}
 \hspace*{-9mm}
 \end{figure}
 \end{column}
 \begin{column}{5.8cm}
 \begin{figure}
-\includegraphics[height=0.5\textheight]{images/Fotos/griebenvonoben.jpg}
-\hspace*{+9mm}
+\includegraphics[width=0.9\textwidth]{images/plotpictures/BSP_V+M}
+\hspace*{+8mm}
 \end{figure}
 \end{column}
 \end{columns}
 \end{frame}
 
+\subsection{Vegetation: Grieben}
 \begin{frame}
-\frametitle{Grieben (+M)}
-\begin{columns}
-\begin{column}{4.8cm}
-\begin{figure}
-\includegraphics[width=0.75\textwidth]{images/Fotos/ruppia.jpg} {\small [3]}
-\end{figure}
-\end{column}
-\begin{column}{8.0cm}
-\begin{figure}
-\includegraphics[width=\textwidth]{images/Wuchshoehenkartierung/Grieben+M1.eps}
-\end{figure}
-\end{column}
-\end{columns}
+\center
+\textcolor{Blue}{{\LARGE Vegetation: Grieben}}
 \end{frame}
 
 \begin{frame}
-\frametitle{Vitte (+M)}
-\begin{columns}
-\begin{column}{7.0cm}
-\begin{figure}
-\includegraphics[height=0.5\textheight]{images/plotpictures/BSP_V+M}
-\hspace*{-9mm}
-\end{figure}
-\end{column}
-\begin{column}{5.8cm}
-\begin{figure}
-\includegraphics[height=0.5\textheight]{images/plotpictures/V+M.png}
-\hspace*{+9mm}
-\end{figure}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Vitte (+M)}
-\begin{columns}
-\begin{column}{4.8cm}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/Fotos/DSCF0799.JPG} 
-\end{figure}
-\end{column}
-\begin{column}{8.0cm}
-\begin{figure}
-\includegraphics[width=\textwidth]{images/Wuchshoehenkartierung/Vitte+Mb1.eps}
-\end{figure}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Spärlich bewachsene Standorte}
-\begin{columns}
-\begin{column}{5.5cm}
-\begin{figure}
-\includegraphics[width=\textwidth]{images/plotpictures/Bsp_V-M}
-\end{figure}
-\end{column}
-\begin{column}{5.5cm}
-\begin{figure}
-\includegraphics[width=\textwidth]{images/plotpictures/Bsp_G-M}
-\end{figure}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Grieben (-M)}
-\begin{columns}
-\begin{column}{4.8cm}
-\begin{figure}
-\includegraphics[width=0.7\textwidth]{images/Fotos/DSCF0876.JPG}
-\end{figure}
-\end{column}
-\begin{column}{8.0cm}
-\begin{figure}
-\includegraphics[width=\textwidth]{images/Wuchshoehenkartierung/Grieben-M1.eps}
-\end{figure}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Vitte (-M)}
-\begin{columns}
-\begin{column}{4.8cm}
-
-\end{column}
-\begin{column}{8.0cm}
-\begin{figure}
-\includegraphics[width=\textwidth]{images/Wuchshoehenkartierung/Vitte-M1.eps}
-\end{figure}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}
-\frametitle{Bedeckung mit Makrophytobenthos und PVI in Grieben}
+\frametitle{Bedeckung mit Makrophytobenthos}
 \begin{columns}
 \begin{column}{5.5cm}
 \begin{figure}
@@ -367,31 +325,60 @@ Korngrößenklasse ($ \Phi $)
 \end{figure}
 \end{column}
 \begin{column}{5.5cm}
+\begin{overprint}
+\onslide<1>
+\begin{figure}
+\includegraphics[height=0.55\textheight]{images/Fotos/griebenvonoben.jpg}
+\end{figure}
+\onslide<2>
+\begin{figure}
+\includegraphics[width=\textwidth]{images/plotpictures/Bsp_G-M}
+\end{figure}
+\end{overprint}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{PVI}
+\begin{columns}
+\begin{column}{7.0cm}
 \begin{figure}
 \includegraphics[width=\textwidth]{images/pvi/boxplot_pvi2.eps}
+\hspace*{-9mm}
+\end{figure}
+\end{column}
+\begin{column}{5.8cm}
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{images/plotpictures/Bsp_G+M}
+\hspace*{+9mm}
 \end{figure}
 \end{column}
 \end{columns}
 \end{frame}
 
-\subsection{Deckung und PVI}
-\begin{frame}
-\frametitle{Bedeckung mit Makrophytobenthos und PVI in Vitte}
-\begin{columns}
-\begin{column}{5.5cm}
-\begin{figure}
-\includegraphics[width=\textwidth]{images/total_cover/total_cover1.eps}
-\end{figure}
-\end{column}
-\begin{column}{5.5cm}
-\begin{figure}
-\includegraphics[width=\textwidth]{images/pvi/boxplot_pvi1.eps}
-\end{figure}
-\end{column}
-\end{columns}
-\end{frame}
 
 \subsection{Sediment}
+
+\begin{frame}
+\frametitle{Korngrößenverteilungen in Vitte}
+\begin{columns}
+\begin{column}{5.5cm}
++M
+\begin{figure}
+\includegraphics[width=\textwidth]{images/grainsize/sediment_im_jahr1.eps}
+\end{figure}
+\end{column}
+\begin{column}{5.5cm}
+-M
+\begin{figure}
+\includegraphics[width=\textwidth]{images/grainsize/sediment_im_jahr2.eps}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Korngrößenverteilungen in Grieben}
@@ -411,23 +398,6 @@ Korngrößenklasse ($ \Phi $)
 \end{columns}
 \end{frame}
 
-\begin{frame}
-\frametitle{Korngrößenverteilungen in Vitte}
-\begin{columns}
-\begin{column}{5.5cm}
-+M
-\begin{figure}
-\includegraphics[width=\textwidth]{images/grainsize/sediment_im_jahr1.eps}
-\end{figure}
-\end{column}
-\begin{column}{5.5cm}
--M
-\begin{figure}
-\includegraphics[width=\textwidth]{images/grainsize/sediment_im_jahr2.eps}
-\end{figure}
-\end{column}
-\end{columns}
-\end{frame}
 
 \begin{frame}
 \begin{columns}
@@ -450,29 +420,146 @@ Organischer Gehalt
 
 \subsection{Fazit}
 \begin{frame}
-\begin{enumerate}
-\item Fazit1
-\item Fazit2
+\begin{columns}
+\begin{column}{9.5cm}
+\begin{enumerate}[<+->] 
+\item Ist in dichten Makrophytenbeständen das Sediment feiner als auf freien/ spärlich besiedelten Flächen?
+\item Ist der organische Gehalt der Sedimente in den dichten Beständen höher?
+\item Verändert sich die Vegetationsstruktur im Jahresverlauf?
+\item Verändert sich die mittlere Korngröße, der Feinpartikelanteil und der organische Gehalt der Sedimente im Jahresverlauf?
 \end{enumerate}
-\end{frame}
-
-\section{Quellen}
-\begin{frame}
-\frametitle{Bildquellen}
+\end{column}
+\begin{column}{2.5cm}
 \begin{itemize}
-\item[1] \textsc{Engelen, Bert}, http://www.pmbio.icbm.de/expeditions/leg301/subproben.jpg 
-[Aufruf 8.5.2014; 13:59]
-\item[2] \textsc{Melbourne Geofabrics}, http://www.treemax.com.au/content/sieves 
-
-[Aufruf 8.5.2014; 12:18]
-\item[3]  \textsc{Stäuber, Kurt}, 
-
-http://wisplants.uwsp.edu/scripts/bigphoto.asp 
-
-[Aufruf 8.5.2014; 14:20]
-
+\item<1->[\cmark] 
+\item<1->[] 
+\item<2->[\cmark]
+\item<2->[]
+\item<3->[\cmark] 
+\item<3->[]
+\item<4->[\xmark]
+\item<4->[]
 \end{itemize}
-
+\end{column}
+\end{columns}
 \end{frame}
+
+%\section{Quellen}
+%\begin{frame}
+%\frametitle{Bildquellen}
+%\begin{itemize}
+%\item[1] \textsc{Engelen, Bert}, http://%www.pmbio.icbm.de/expeditions/leg301/subproben.jpg 
+%[Aufruf 8.5.2014; 13:59]
+%\item[2] \textsc{Melbourne Geofabrics}, http://www.treemax.com.au/content/sieves 
+
+%[Aufruf 8.5.2014; 12:18]
+%\item[3]  \textsc{Stäuber, Kurt}, 
+
+%http://wisplants.uwsp.edu/scripts/bigphoto.asp 
+
+%[Aufruf 8.5.2014; 14:20]
+
+%\end{itemize}
+
+%\end{frame}
+
+
+\end{document}
+
+\begin{document}
+\begin{frame}
+\frametitle{Detaillierte Vegetationsstruktur (dichte Vegetation)}
+\begin{columns}
+\begin{column}{4.8cm}
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{images/Fotos/DSCF0799.JPG} 
+\end{figure}
+\begin{center}
+Blasentang
+
+(\textit{Fucus vesiculosus})
+\end{center}
+\end{column}
+\begin{column}{8.0cm}
+\begin{figure}
+\includegraphics[width=\textwidth]{images/Wuchshoehenkartierung/Vitte+Mb1.eps}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detaillierte Vegetationsstruktur (spärliche Vegetation)}
+\begin{columns}
+\begin{column}{4.8cm}
+\begin{figure}
+\includegraphics[width=0.7\textwidth]{images/Fotos/DSCF0876.JPG}
+\end{figure}
+\begin{center}
+Armleuchteralge
+
+(\textit{Chara canescens})
+\end{center}
+\end{column}
+\begin{column}{8.0cm}
+\begin{figure}
+\includegraphics[width=\textwidth]{images/Wuchshoehenkartierung/Vitte-M1.eps}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Detaillierte Vegetationsstruktur}
+\begin{columns}
+\begin{column}{4.8cm}
+\begin{figure}
+\includegraphics[width=0.6\textwidth]{images/Fotos/ruppia.jpg} {\small [3]}
+\end{figure}
+\begin{center}
+Schraubige Salde
+
+(\textit{Ruppia cirrhosa})
+\end{center}
+\end{column}
+\begin{column}{8.0cm}
+\begin{figure}
+\includegraphics[width=\textwidth]{images/Wuchshoehenkartierung/Grieben+M1.eps}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Spärlich bewachsene Standorte}
+%\begin{columns}
+%\begin{column}{5.5cm}
+%\begin{figure}
+%\includegraphics[width=\textwidth]{images/plotpictures/Bsp_V-M}
+%\end{figure}
+%\end{column}
+%\begin{column}{5.5cm}
+%\begin{figure}
+%\includegraphics[width=\textwidth]{images/plotpictures/Bsp_G-M}
+%\end{figure}
+%\end{column}
+%\end{columns}
+%\end{frame}
+
+
+\begin{frame}
+\frametitle{Grieben (-M)}
+\begin{columns}
+\begin{column}{4.8cm}
+
+\end{column}
+\begin{column}{8.0cm}
+\begin{figure}
+\includegraphics[width=\textwidth]{images/Wuchshoehenkartierung/Grieben-M1.eps}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 
 \end{document}
